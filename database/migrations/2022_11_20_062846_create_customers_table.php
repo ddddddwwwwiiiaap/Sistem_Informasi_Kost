@@ -14,7 +14,7 @@ class CreateCustomersTable extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            //Add table id_number, user_id, room_id, address,
+            //Add attributs id_number, user_id, room_id, address,
             //phone_number, whatsapp_number, status
             $table->id();
             $table->char('id_number', 20);
