@@ -14,7 +14,12 @@ class CreateRoomTypesTable extends Migration
     public function up()
     {
         Schema::create('room_types', function (Blueprint $table) {
+            //Add table name, description, price, currency
             $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->integer('price')->nullable();
+            $table->char('currency', 3)->default('IDR');
             $table->timestamps();
         });
     }
