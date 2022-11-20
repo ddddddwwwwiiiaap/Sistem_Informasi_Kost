@@ -20,7 +20,6 @@ class Customer extends Model
         'id_number',
         'user_id',
         'room_id',
-        'gender',
         'address',
         'phone_number',
         'whatsapp_number',
@@ -93,7 +92,6 @@ class Customer extends Model
             'id_number' => $request->id_number,
             'user_id' => $id,
             'room_id' => $request->room_id,
-            'gender' => $request->gender,
             'address' => $request->address,
             'phone_number' => $request->phone_number,
             'whatsapp_number' => $request->whatsapp_number,
@@ -105,7 +103,6 @@ class Customer extends Model
         $customer->update([
             'id_number' => $request->id_number,
             'room_id' => $request->room_id,
-            'gender' => $request->gender,
             'address' => $request->address,
             'phone_number' => $request->phone_number,
             'whatsapp_number' => $request->whatsapp_number,
