@@ -14,7 +14,14 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
+            //menambahkan kolom pada tabel transactions
             $table->id();
+            $table->foreignId('customer_id')->constrained('customers');
+            $table->enum('payment_method', ['cash', 'transfer']);
+            $table->integer('total');
+            $table->text('description')->nullable();
+            $table->string('evidence')->nullable();
+            $table->enum('status', ['accept', 'pending'])->default('pending');
             $table->timestamps();
         });
     }
