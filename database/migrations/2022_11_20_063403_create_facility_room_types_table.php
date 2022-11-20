@@ -14,7 +14,10 @@ class CreateFacilityRoomTypesTable extends Migration
     public function up()
     {
         Schema::create('facility_room_types', function (Blueprint $table) {
+            //meambahkan kolom pada tabel facility_room_types
             $table->id();
+            $table->foreignId('facility_id')->constrained('facilities');
+            $table->foreignId('room_type_id')->constrained('room_types');
             $table->timestamps();
         });
     }
