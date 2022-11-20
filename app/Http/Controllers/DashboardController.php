@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Dashboard;
 use App\Models\Customer;
 use App\Models\Facility;
-use App\Models\BoardingHouse;
 use App\Models\Room;
 use App\Models\Transaction;
 use App\Models\Message;
@@ -23,8 +22,7 @@ class DashboardController extends Controller
     {
         $customers = Customer::getData();
         $facilities = Facility::index();
-        $boardinghouses = BoardingHouse::index();
-        return view('dashboard.customer', compact('customers', 'facilities', 'boardinghouses'));
+        return view('dashboard.customer', compact('customers', 'facilities'));
         
     }
 
