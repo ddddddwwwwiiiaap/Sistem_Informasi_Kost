@@ -13,8 +13,11 @@ class CreateTransactionDetailsTable extends Migration
      */
     public function up()
     {
+        //membuat tabel transaction_details
         Schema::create('transaction_details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('transaction_id')->constrained('transactions');
+            $table->string('month')->default(date('F Y'));
             $table->timestamps();
         });
     }
