@@ -48,5 +48,3 @@ class TransactionDetail extends Model
         TransactionDetail::where('transaction_id', $id)->delete();
     }
 }
-
-}
