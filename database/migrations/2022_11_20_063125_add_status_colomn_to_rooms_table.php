@@ -14,7 +14,8 @@ class AddStatusColomnToRoomsTable extends Migration
     public function up()
     {
         Schema::table('rooms', function (Blueprint $table) {
-            //
+            //menambahkan kolom status
+            $table->enum('status', ['available', 'not available'])->default('available');
         });
     }
 
@@ -26,7 +27,8 @@ class AddStatusColomnToRoomsTable extends Migration
     public function down()
     {
         Schema::table('rooms', function (Blueprint $table) {
-            //
+            //menambahkan drop kolom status
+            $table->dropColumn('status');
         });
     }
 }
