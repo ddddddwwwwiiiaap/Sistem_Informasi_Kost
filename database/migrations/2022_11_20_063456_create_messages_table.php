@@ -14,7 +14,11 @@ class CreateMessagesTable extends Migration
     public function up()
     {
         Schema::create('messages', function (Blueprint $table) {
+            //menambahkan kolom pada tabel messages
             $table->id();
+            $table->foreignId('customer_id')->constrained('customers');
+            $table->text('message');
+            $table->enum('status', ['accept', 'pending'])->default('pending');
             $table->timestamps();
         });
     }
