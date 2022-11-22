@@ -14,12 +14,11 @@ class CreateCustomersTable extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            //Add attributs id_number, user_id, room_id, address,
-            //phone_number, whatsapp_number, status
             $table->id();
             $table->char('id_number', 20);
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('room_id')->constrained('rooms');
+            $table->enum('gender', ['L', 'P']);
             $table->text('address');
             $table->string('phone_number', 15)->nullable();
             $table->string('whatsapp_number', 15)->nullable();

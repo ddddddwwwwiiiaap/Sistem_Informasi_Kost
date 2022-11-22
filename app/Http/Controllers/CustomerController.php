@@ -11,7 +11,6 @@ use Alert;
 
 class CustomerController extends Controller
 {
-    //
     /**
      * Display a listing of the resource.
      *
@@ -45,6 +44,7 @@ class CustomerController extends Controller
         $validator = Validator::make($request->all(), [
             'id_number' => 'required|max:20',
             'name' => 'required|max:255',
+            'gender' => 'required',
             'room_id' => 'required',
             'phone_number' => 'max:15',
             'whatsapp_number' => 'max:15',
@@ -104,6 +104,7 @@ class CustomerController extends Controller
         $validator = Validator::make($request->all(), [
             'id_number' => 'required|max:20',
             'name' => 'required|max:255',
+            'gender' => 'required',
             'room_id' => 'required',
             'phone_number' => 'max:15',
             'whatsapp_number' => 'max:15',
