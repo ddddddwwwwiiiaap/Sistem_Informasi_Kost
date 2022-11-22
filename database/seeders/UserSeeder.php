@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 
-class UserSedder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,6 @@ class UserSedder extends Seeder
      */
     public function run()
     {
-        //
         User::insert([
             [
                 'name' => 'Administrator',
@@ -33,5 +32,6 @@ class UserSedder extends Seeder
                 'created_at' => Carbon::now(),
             ]
         ]);
+
     }
 }
