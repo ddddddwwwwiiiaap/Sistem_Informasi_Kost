@@ -34,9 +34,7 @@
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card card-blog card-plain">
                             <div class="position-relative">
-                                <a class="d-block shadow-xl border-radius-xl">
-                                    <img src="{{ asset('storage/uploads/' . $room->files->path) }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl" style="height: 154px !important; width: 254px !important; object-fit: cover">
-                                </a>
+                                
                             </div>
                             <div class="card-body px-1 pb-0">
                                 <p class="text-gradient text-dark mb-2 text-sm">{{ $room->roomType->name }}</p>

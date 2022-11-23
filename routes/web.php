@@ -12,7 +12,6 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\MessageController;
-use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +39,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('facilities', FacilityController::class);
     Route::resource('roomTypes', RoomTypeController::class);
     Route::resource('rooms', RoomController::class);
-    Route::post('files', [FileController::class, 'store'])->name('file.store');
-    Route::post('files/remove', [FileController::class, 'removeFile'])->name('file.remove');
     Route::resource('customers', CustomerController::class);
     Route::get('customers/{customer}/updateStatus', [CustomerController::class, 'updateStatus'])->name('customers.updateStatus');
     Route::get('transactions/{transaction}/updateStatus', [TransactionController::class, 'updateStatus'])->name('transactions.updateStatus');

@@ -52,12 +52,6 @@
                             <textarea name="description" id="description" style="display: none"></textarea>
                         </div>
                     </div>
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <label for="images" class="form-label">Foto Kamar</label>
-                            <div class="form-control dropzone" id="file-dropzone" style="padding: 20px; background-color: #fff"></div>
-                        </div>
-                    </div>
                     <div class="d-flex justify-content-end mt-4">
                         <a href="{{ route('rooms.index') }}" class="btn btn-light m-0">Cancel</a>
                         <button type="submit" name="button" class="btn bg-gradient-primary m-0 ms-2">Simpan</button>
@@ -90,41 +84,6 @@
             shouldSort: false,
         });
     };
-
-    Dropzone.options.fileDropzone = {
-        url: '{{ route('
-        file.store ') }}',
-        acceptedFiles: ".jpeg,.jpg,.png,.gif",
-        addRemoveLinks: true,
-        maxFilesize: 8,
-        headers: {
-            'X-CSRF-TOKEN': "{{ csrf_token() }}"
-        },
-        removedfile: function(file) {
-            var name = file.upload.filename;
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('
-                file.remove ') }}',
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    name: name
-                },
-                success: function(data) {
-                    console.log("File has been successfully removed!!");
-                },
-                error: function(e) {
-                    console.log(e);
-                }
-            });
-            var fileRef;
-            return (fileRef = file.previewElement) != null ?
-                fileRef.parentNode.removeChild(file.previewElement) : void 0;
-        },
-        success: function(file, response) {
-            console.log(file);
-        },
-    }
 
     $("#form").on("submit", function() {
         $("#description").val(quill.container.firstChild.innerHTML);

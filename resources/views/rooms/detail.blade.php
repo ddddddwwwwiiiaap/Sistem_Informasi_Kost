@@ -21,15 +21,14 @@
                 <h5 class="mb-4">Detail Kamar</h5>
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 text-center">
-                        <img class="w-100 border-radius-lg shadow-lg mx-auto" src="{{ asset($room->files->path) }}">
                         <div class="my-gallery d-flex mt-4 pt-2" itemscope itemtype="http://schema.org/ImageGallery">
-                            @foreach($images as $image)
+                            <!--@foreach($images as $image)
                             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                 <a href="{{ asset($image->path) }}" itemprop="contentUrl" data-size="600x600">
                                     <img class="w-75 min-height-100 max-height-100 border-radius-lg shadow" src="{{ asset($image->path) }}" />
                                 </a>
                             </figure>
-                            @endforeach
+                            @endforeach-->
                         </div>
                         <!-- Root element of PhotoSwipe. Must have class pswp. -->
                         <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

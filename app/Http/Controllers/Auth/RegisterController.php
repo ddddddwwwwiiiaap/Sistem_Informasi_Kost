@@ -29,19 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
-    protected function redirectTo()
-    {
-        if (auth()->user()->role == 'admin')
-        {
-            return '/admin/dashboard';
-        } 
-        elseif (auth()->user()->role == 'customer') 
-        {
-            return '/customer/dashboard';
-        }
-        return '/';
-    }
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
