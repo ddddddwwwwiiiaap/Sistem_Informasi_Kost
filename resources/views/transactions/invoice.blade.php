@@ -106,11 +106,13 @@
                                 contact us at:</p>
                             <h6 class="text-secondary mb-0">
                                 email:
-                                <span class="text-dark"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d4e484d4d524f497d5e4f585c49544b5810495450135e5250">[email&#160;protected]</a></span>
+                                <span class="text-dark"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                        data-cfemail="3d4e484d4d524f497d5e4f585c49544b5810495450135e5250">[email&#160;protected]</a></span>
                             </h6>
                         </div>
                         <div class="col-lg-7 text-md-end mt-md-0 mt-3">
-                            <button class="btn bg-gradient-info mt-lg-7 mb-0" onClick="window.print()" type="button" name="button">Print</button>
+                            <button class="btn bg-gradient-info mt-lg-7 mb-0" onClick="window.print()" type="button"
+                                name="button">Print</button>
                         </div>
                     </div>
                 </div>

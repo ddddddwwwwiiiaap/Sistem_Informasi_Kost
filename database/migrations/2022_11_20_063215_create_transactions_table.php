@@ -20,7 +20,6 @@ class CreateTransactionsTable extends Migration
             $table->enum('payment_method', ['cash', 'transfer']);
             $table->integer('total');
             $table->text('description')->nullable();
-            $table->string('evidence')->nullable();
             $table->enum('status', ['accept', 'pending'])->default('pending');
             $table->timestamps();
         });

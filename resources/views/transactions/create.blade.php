@@ -25,41 +25,41 @@
                     @csrf
                     <div class="row">
                         @if (Auth::user()->role == 'admin')
-                        <div class="col-12">
-                            <label for="name" class="form-label">Nama Customer</label>
-                            <select class="form-control" name="customer_id" id="choices-customer">
-                                <option selected disabled>Pilih Customer</option>
-                                @foreach ($customers as $customer)
-                                <option value="{{ $customer->id }}">{{ $customer->user->name . ' - ' . $customer->room->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                            <div class="col-12">
+                                <label for="name" class="form-label">Nama Customer</label>
+                                <select class="form-control" name="customer_id" id="choices-customer">
+                                    <option selected disabled>Pilih Customer</option>
+                                    @foreach ($customers as $customer)
+                                        <option value="{{ $customer->id }}">{{ $customer->user->name . ' - ' . $customer->room->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         @else
-                        <div class="col-12">
-                            <label for="name" class="form-label">Nama Customer</label>
-                            <select class="form-control" name="customer_id" id="choices-customer" disabled>
-                                <option value="{{ $customer->id }}" selected>{{ $customer->user->name . ' - ' . $customer->room->name }}</option>
-                            </select>
-                            <input type="hidden" name="customer_id" value="{{ $customer->id }}">
-                        </div>
+                            <div class="col-12">
+                                <label for="name" class="form-label">Nama Customer</label>
+                                <select class="form-control" name="customer_id" id="choices-customer" disabled>
+                                    <option value="{{ $customer->id }}" selected>{{ $customer->user->name . ' - ' . $customer->room->name }}</option>
+                                </select>
+                                <input type="hidden" name="customer_id" value="{{ $customer->id }}">
+                            </div>
                         @endif
                     </div>
                     <div class="row mt-4">
                         <div class="col-12">
                             <label for="month" class="form-label">Bulan</label>
                             <select class="form-control" name="month[]" id="choices-month" multiple>
-                                <option>Januari 2021</option>
-                                <option>Februari 2021</option>
-                                <option>Maret 2021</option>
-                                <option>April 2021</option>
-                                <option>Mei 2021</option>
-                                <option>Juni 2021</option>
-                                <option>Juli 2021</option>
-                                <option>Agustus 2021</option>
-                                <option>September 2021</option>
-                                <option>Oktober 2021</option>
-                                <option>November 2021</option>
-                                <option>Desember 2021</option>
+                                <option>Januari 2022</option>
+                                <option>Februari 2022</option>
+                                <option>Maret 2022</option>
+                                <option>April 2022</option>
+                                <option>Mei 2022</option>
+                                <option>Juni 2022</option>
+                                <option>Juli 2022</option>
+                                <option>Agustus 2022</option>
+                                <option>September 2022</option>
+                                <option>Oktober 2022</option>
+                                <option>November 2022</option>
+                                <option>Desember 2022</option>
                             </select>
                         </div>
                     </div>
@@ -71,16 +71,6 @@
                             </div>
                         </div>
                     </div>
-                    @if (Auth::user()->role == 'customer')
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <label for="evidence" class="form-label">Bukti Transfer</label>
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="evidence" name="evidence" onfocus="focused(this)" onfocusout="defocused(this)">
-                            </div>
-                        </div>
-                    </div>
-                    @endif
                     <div class="row mt-4">
                         <div class="col-12">
                             <label for="description" class="form-label">Keterangan</label>
@@ -104,25 +94,25 @@
 @endsection
 
 @push('script')
-<script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    if (document.getElementById('choices-customer')) {
-        var tags = document.getElementById('choices-customer');
-        const examples = new Choices(tags, {
-            searchEnabled: true,
-            searchPlaceholderValue: 'Search...',
-            shouldSort: false,
-        });
-    };
+    <script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        if (document.getElementById('choices-customer')) {
+            var tags = document.getElementById('choices-customer');
+            const examples = new Choices(tags, {
+                searchEnabled: true,
+                searchPlaceholderValue: 'Search...', 
+                shouldSort: false,
+            });
+        };
 
-    if (document.getElementById('choices-month')) {
-        var element = document.getElementById('choices-month');
-        const example = new Choices(element, {
-            searchEnabled: true,
-            removeItemButton: true,
-            shouldSort: false,
-        });
-    };
-</script>
+        if (document.getElementById('choices-month')) {
+            var element = document.getElementById('choices-month');
+            const example = new Choices(element, {
+                searchEnabled: true,
+                removeItemButton: true,
+                shouldSort: false,
+            });
+        };
+    </script>
 @endpush

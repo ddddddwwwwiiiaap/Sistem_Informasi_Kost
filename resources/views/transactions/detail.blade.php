@@ -37,17 +37,16 @@
                             <div>
                                 <div class="avatar avatar-xxl me-3 bg-gradient-dark">
                                     <h1 class="text-light font-weight-bold mx-auto" style="font-size: 72px">
-                                        {{ substr($transaction->customer->user->name, 0, 1) }}
-                                    </h1>
+                                        {{ substr($transaction->customer->user->name, 0, 1) }}</h1>
                                 </div>
                             </div>
                             <div>
                                 <h6 class="text-lg mb-0 mt-2">{{ $transaction->customer->user->name }}</h6>
                                 <p class="text-sm mb-3">{{ $transaction->customer->room->name }}</p>
                                 @if($transaction->status == 'accept')
-                                <span class="badge badge-sm bg-gradient-success">Sukses</span>
+                                    <span class="badge badge-sm bg-gradient-success">Sukses</span>
                                 @else
-                                <span class="badge badge-sm bg-gradient-warning">Pending</span>
+                                    <span class="badge badge-sm bg-gradient-warning">Pending</span>
                                 @endif
                             </div>
                         </div>
@@ -59,34 +58,36 @@
                         <h6 class="mb-3">Bulan yang dibayar</h6>
                         <div class="timeline timeline-one-side">
                             @foreach($transaction->transactionDetails as $data)
-                            <div class="timeline-block mb-3">
-                                <span class="timeline-step">
-                                    <i class="ni ni-check-bold text-success text-gradient"></i>
-                                </span>
-                                <div class="timeline-content">
-                                    <h6 class="text-dark text-sm font-weight-bold mb-0">{{ $data->month }}</h6>
-                                    {{-- <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 4:54 PM</p> --}}
+                                <div class="timeline-block mb-3">
+                                    <span class="timeline-step">
+                                        <i class="ni ni-check-bold text-success text-gradient"></i>
+                                    </span>
+                                    <div class="timeline-content">
+                                        <h6 class="text-dark text-sm font-weight-bold mb-0">{{ $data->month }}</h6>
+                                        {{-- <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 4:54 PM</p> --}}
+                                    </div>
                                 </div>
-                            </div>
                             @endforeach
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
                         <h6 class="mb-3">Metode Pembayaran</h6>
                         @if ($transaction->payment_method == 'cash')
-                        <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                            <img class="w-10 me-3 mb-0" src="{{ asset('assets/img/logos/money.png') }}" alt="logo">
-                            <h6 class="mb-0">CASH</h6>
-                        </div>
+                            <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                                <img class="w-10 me-3 mb-0" src="{{ asset('assets/img/logos/money.png') }}" alt="logo">
+                                <h6 class="mb-0">CASH</h6>
+                            </div>
                         @else
-                        <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                            <img class="w-10 me-3 mb-0" src="{{ asset('assets/img/logos/mastercard.png') }}" alt="logo">
-                            <h6 class="mb-0">TRANSFER</h6>
-                            <button type="button" class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center ms-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="We do not store card details">
-                                <i class="fas fa-info" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <h6 class="mb-3 mt-3"><a href="{{ asset('storage/' . $transaction->evidence) }}">Bukti Pembayaran</a></h6>
+                            <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                                <img class="w-10 me-3 mb-0" src="{{ asset('assets/img/logos/mastercard.png') }}" alt="logo">
+                                <h6 class="mb-0">TRANSFER</h6>
+                                <button type="button"
+                                    class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center ms-auto"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
+                                    data-bs-original-title="We do not store card details">
+                                    <i class="fas fa-info" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         @endif
                     </div>
                     <div class="col-lg-5 col-md-6 col-12">

@@ -21,7 +21,6 @@ class Transaction extends Model
         'payment_method',
         'total',
         'description',
-        'evidence',
         'status',
     ];
 
@@ -71,11 +70,9 @@ class Transaction extends Model
         if (Auth::user()->role == 'admin') {
             $payment_method = 'cash';
             $status = 'accept';
-            $evidence = null;
         } else {
             $payment_method = 'transfer';
             $status = 'pending';
-            $evidence = $request->file('evidence')->store('evidence', 'public');
         }
 
         $transaction = Transaction::create([
@@ -83,7 +80,6 @@ class Transaction extends Model
             'payment_method' => $payment_method,
             'total' => $request->total,
             'description' => $request->description,
-            'evidence' => $evidence,
             'status' => $status,
         ]);
         return $transaction->id;
@@ -97,29 +93,17 @@ class Transaction extends Model
                 'total' => $request->total,
                 'description' => $request->description,
             ]);
-        } else {
-            if ($request->file('evidence') == "") {
-                $transaction->update([
-                    'customer_id' => $request->customer_id,
-                    'total' => $request->total,
-                    'description' => $request->description,
-                ]);
+
             } else {
-                if ($transaction->evidence && file_exists(storage_path('app/public/' . $transaction->evidence))) {
-                    \Storage::delete('public/' . $transaction->evidence);
-                }
-                $evidence = $request->file('evidence')->store('evidence', 'public');
                 $transaction->update([
                     'customer_id' => $request->customer_id,
                     'total' => $request->total,
                     'description' => $request->description,
-                    'evidence' => $evidence,
                 ]);
                 // $image = $request->file('image');
                 // $image->storeAs('public/', $image->hashName());
             }
         }
-    }
 
     public static function updateStatus(Transaction $transaction)
     {

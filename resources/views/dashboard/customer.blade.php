@@ -55,7 +55,11 @@
     @endforeach
 </div>
 <div class="row mt-4">
+    <div class="col-lg-5 mt-md-0 mt-4">
+        
+    </div>
     
+</div>
 @endsection
 
 @push('script')

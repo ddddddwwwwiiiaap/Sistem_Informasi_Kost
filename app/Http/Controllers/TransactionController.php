@@ -54,12 +54,6 @@ class TransactionController extends Controller
             'total' => 'required',
         ]);
 
-        if (Auth::user()->role == 'customer') {
-            $validator = Validator::make($request->all(), [
-                'evidence' => 'required',
-            ]);
-        }
-
         if ($validator->fails()) {
             Alert::toast($validator->messages()->all()[0], 'error');
             return redirect()->back()->withInput();

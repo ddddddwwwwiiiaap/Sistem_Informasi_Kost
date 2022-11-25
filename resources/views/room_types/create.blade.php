@@ -27,7 +27,8 @@
                         <div class="col-12">
                             <label for="name" class="form-label">Nama Tipe Kamar <span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="name" name="name" onfocus="focused(this)" onfocusout="defocused(this)">
+                                <input type="text" class="form-control" id="name" name="name" onfocus="focused(this)"
+                                    onfocusout="defocused(this)">
                             </div>
                         </div>
                     </div>
@@ -38,16 +39,17 @@
                                 (optional)
                             </p>
                             <div class="input-group">
-                                <textarea id="description" name="description" class="form-control" cols="30" rows="5" onfocus="focused(this)" onfocusout="defocused(this)"></textarea>
+                                <textarea id="description" name="description" class="form-control" cols="30" rows="5"
+                                    onfocus="focused(this)" onfocusout="defocused(this)"></textarea>
                             </div>
                         </div>
-                    </div>
+                    </div>     
                     <div class="row mt-3">
-                        <div class="col-12">
+                        <div class="col-12">         
                             <label class="form-label">Fasilitas <span class="text-danger">*</span></label>
                             <select class="form-control" name="facility_id[]" id="choices-facility" multiple>
                                 @foreach ($facilities as $facility)
-                                <option value="{{ $facility->id }}">{{ $facility->name }}</option>
+                                    <option value="{{ $facility->id }}" >{{ $facility->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -56,7 +58,8 @@
                         <div class="col-6">
                             <label for="price" class="form-label">Harga <span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input type="number" class="form-control" id="price" name="price" onfocus="focused(this)" onfocusout="defocused(this)">
+                                <input type="number" class="form-control" id="price" name="price"
+                                    onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                         </div>
                         <div class="col-6">
@@ -83,20 +86,21 @@
 @endsection
 
 @push('script')
-<script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
-<script>
-    if (document.getElementById('choices-facility')) {
-        var tags = document.getElementById('choices-facility');
-        const examples = new Choices(tags, {
-            removeItemButton: true
-        });
-    };
+    <script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
+    <script>
+        if (document.getElementById('choices-facility')) {
+            var tags = document.getElementById('choices-facility');
+            const examples = new Choices(tags, {
+                removeItemButton: true
+            });
+        };
 
-    if (document.getElementById('choices-currency')) {
-        var element = document.getElementById('choices-currency');
-        const example = new Choices(element, {
-            searchEnabled: false
-        });
-    };
-</script>
+        if (document.getElementById('choices-currency')) {
+            var element = document.getElementById('choices-currency');
+            const example = new Choices(element, {
+                searchEnabled: false
+            });
+        };
+
+    </script>
 @endpush

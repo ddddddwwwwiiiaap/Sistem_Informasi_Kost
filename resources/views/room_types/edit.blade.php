@@ -39,39 +39,39 @@
                                 <textarea id="description" name="description" class="form-control" cols="30" rows="5" onfocus="focused(this)" onfocusout="defocused(this)">{{ $roomType->description }}</textarea>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-12">
-                                <label class="form-label">Fasilitas <span class="text-danger">*</span></label>
-                                <select class="form-control" name="facility_id[]" id="choices-facility" multiple>
-                                    @foreach ($facilities as $facility)
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <label class="form-label">Fasilitas <span class="text-danger">*</span></label>
+                            <select class="form-control" name="facility_id[]" id="choices-facility" multiple>
+                                @foreach ($facilities as $facility)
                                     <option value="{{ $facility->id }}" {{ $facility_roomTypes->contains('facility_id', $facility->id) ? 'selected' : '' }}>{{ $facility->name }}</option>
-                                    @endforeach
-                                </select>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <label for="price" class="form-label">Harga <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="price" name="price" onfocus="focused(this)" onfocusout="defocused(this)" value="{{ $roomType->price }}">
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-6">
-                                <label for="price" class="form-label">Harga <span class="text-danger">*</span></label>
-                                <div class="input-group">
-                                    <input type="number" class="form-control" id="price" name="price" onfocus="focused(this)" onfocusout="defocused(this)" value="{{ $roomType->price }}">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <label>Kurs Mata Kuang <span class="text-danger">*</span></label>
-                                <select class="form-control" name="currency" id="choices-currency">
-                                    <option value="IDR" selected="">IDR</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="USD">USD</option>
-                                    <option value="CNY">CNY</option>
-                                    <option value="INR">INR</option>
-                                    <option value="BTC">BTC</option>
-                                </select>
-                            </div>
+                        <div class="col-6">
+                            <label>Kurs Mata Kuang <span class="text-danger">*</span></label>
+                            <select class="form-control" name="currency" id="choices-currency">
+                                <option value="IDR" selected="">IDR</option>
+                                <option value="EUR">EUR</option>
+                                <option value="USD">USD</option>
+                                <option value="CNY">CNY</option>
+                                <option value="INR">INR</option>
+                                <option value="BTC">BTC</option>
+                            </select>
                         </div>
-                        <div class="d-flex justify-content-end mt-4">
-                            <a href="{{ route('roomTypes.index') }}" class="btn btn-light m-0">Cancel</a>
-                            <button type="submit" name="button" class="btn bg-gradient-primary m-0 ms-2">Simpan</button>
-                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-4">
+                        <a href="{{ route('roomTypes.index') }}" class="btn btn-light m-0">Cancel</a>
+                        <button type="submit" name="button" class="btn bg-gradient-primary m-0 ms-2">Simpan</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -80,20 +80,21 @@
 @endsection
 
 @push('script')
-<script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
-<script>
-    if (document.getElementById('choices-facility')) {
-        var tags = document.getElementById('choices-facility');
-        const examples = new Choices(tags, {
-            removeItemButton: true
-        });
-    };
+    <script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
+    <script>
+        if (document.getElementById('choices-facility')) {
+            var tags = document.getElementById('choices-facility');
+            const examples = new Choices(tags, {
+                removeItemButton: true
+            });
+        };
 
-    if (document.getElementById('choices-currency')) {
-        var element = document.getElementById('choices-currency');
-        const example = new Choices(element, {
-            searchEnabled: false
-        });
-    };
-</script>
+        if (document.getElementById('choices-currency')) {
+            var element = document.getElementById('choices-currency');
+            const example = new Choices(element, {
+                searchEnabled: false
+            });
+        };
+
+    </script>
 @endpush

@@ -60,7 +60,7 @@ class User extends Authenticatable
     public static function createEmail($room_name)
     {
         $date = date('d');
-        $email = Str::lower(str_replace(' ', '', $room_name)) . Str::random(2) . '@bougenville.com';
+        $email = Str::lower(str_replace(' ', '', $room_name)) . Str::random(2) . '@gamil.com';
         return $email;
     }
 
