@@ -33,7 +33,6 @@ Auth::routes();
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [DashboardController::class, 'indexAdmin'])->name('admin.dashboard');
-    Route::resource('boardingHouses', BoardingHouseController::class);
     Route::get('regencies/{id}', [RegencyController::class, 'index']);
     Route::get('districts/{id}', [DistrictController::class, 'index']);
     Route::get('villages/{id}', [VillageController::class, 'index']);
