@@ -6,7 +6,7 @@
         <li class="breadcrumb-item text-sm text-dark"><a class="opacity-5 text-dark" href="javascript:;">Dashboard</a>
         </li>
         <li class="breadcrumb-item text-sm text-dark"><a class="opacity-5 text-dark" href="javascript:;">Manajemen Customer</a></li>
-    <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Edit Customer</li>
+        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Edit Customer</li>
     </ol>
     <h6 class="font-weight-bolder mb-0">Customer</h6>
 </nav>
@@ -46,7 +46,7 @@
                             <select class="form-control" name="room_id" id="choices-room" required>
                                 <option value="{{ $customer->room_id }}" selected>{{ $customer->room->name }}</option>
                                 @foreach ($rooms as $room)
-                                    <option value="{{ $room->id }}">{{ $room->name }}</option>
+                                <option value="{{ $room->id }}">{{ $room->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <div class="card-footer pt-0">
-                    <div class="row">    
+                    <div class="row">
                         <div class="d-flex justify-content-end mt-4">
                             <a href="{{ route('customers.index') }}" class="btn btn-light m-0">Cancel</a>
                             <button type="submit" name="button" class="btn bg-gradient-primary m-0 ms-2">Submit</button>
@@ -110,23 +110,23 @@
 @endsection
 
 @push('script')
-    <script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
-    <script>
-        if (document.getElementById('choices-room')) {
-            var tags = document.getElementById('choices-room');
-            const examples = new Choices(tags, {
-                searchEnabled: true,
-                searchPlaceholderValue: 'Search...',
-                shouldSort: false,
-            });
-        };
+<script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
+<script>
+    if (document.getElementById('choices-room')) {
+        var tags = document.getElementById('choices-room');
+        const examples = new Choices(tags, {
+            searchEnabled: true,
+            searchPlaceholderValue: 'Search...',
+            shouldSort: false,
+        });
+    };
 
-        if (document.getElementById('choices-gender')) {
-            var tags = document.getElementById('choices-gender');
-            const examples = new Choices(tags, {
-                searchEnabled: true,
-                shouldSort: false,
-            });
-        };
-    </script>
+    if (document.getElementById('choices-gender')) {
+        var tags = document.getElementById('choices-gender');
+        const examples = new Choices(tags, {
+            searchEnabled: true,
+            shouldSort: false,
+        });
+    };
+</script>
 @endpush

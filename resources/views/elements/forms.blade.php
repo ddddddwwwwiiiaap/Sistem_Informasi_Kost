@@ -3,8 +3,7 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark"
-                href="{{ route('dashboard') }}">Dashboard</a></li>
+        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="{{ route('dashboard') }}">Dashboard</a></li>
         <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Forms</li>
     </ol>
     <h6 class="font-weight-bolder mb-0">Forms</h6>
@@ -23,8 +22,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com">
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -80,14 +78,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-alternative"
-                                        id="exampleFormControlInput1" placeholder="name@example.com">
+                                    <input type="email" class="form-control form-control-alternative" id="exampleFormControlInput1" placeholder="name@example.com">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Regular"
-                                        class="form-control form-control-alternative" disabled />
+                                    <input type="text" placeholder="Regular" class="form-control form-control-alternative" disabled />
                                 </div>
                             </div>
                         </div>
@@ -96,8 +92,7 @@
                                 <div class="form-group">
                                     <div class="input-group input-group-alternative mb-4">
                                         <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
-                                        <input class="form-control form-control-alternative" placeholder="Search"
-                                            type="text">
+                                        <input class="form-control form-control-alternative" placeholder="Search" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -113,14 +108,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group has-success">
-                                    <input type="text" placeholder="Success"
-                                        class="form-control form-control-alternative is-valid" />
+                                    <input type="text" placeholder="Success" class="form-control form-control-alternative is-valid" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group has-danger">
-                                    <input type="email" placeholder="Error Input"
-                                        class="form-control form-control-alternative is-invalid" />
+                                    <input type="email" placeholder="Error Input" class="form-control form-control-alternative is-invalid" />
                                 </div>
                             </div>
                         </div>
@@ -140,8 +133,7 @@
                 <form>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Example select</label>
@@ -186,8 +178,7 @@
                     </div>
                     <div class="form-group">
                         <label for="example-search-input" class="form-control-label">Search</label>
-                        <input class="form-control" type="search" value="Tell me your secret ..."
-                            id="example-search-input">
+                        <input class="form-control" type="search" value="Tell me your secret ..." id="example-search-input">
                     </div>
                     <div class="form-group">
                         <label for="example-email-input" class="form-control-label">Email</label>
@@ -211,8 +202,7 @@
                     </div>
                     <div class="form-group">
                         <label for="example-datetime-local-input" class="form-control-label">Datetime</label>
-                        <input class="form-control" type="datetime-local" value="2018-11-23T10:30:00"
-                            id="example-datetime-local-input">
+                        <input class="form-control" type="datetime-local" value="2018-11-23T10:30:00" id="example-datetime-local-input">
                     </div>
                     <div class="form-group">
                         <label for="example-date-input" class="form-control-label">Date</label>
@@ -339,8 +329,7 @@
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" id="radio3" name="radioDisabled" id="customRadioDisabled"
-                            class="form-check-input" disabled>
+                        <input type="radio" id="radio3" name="radioDisabled" id="customRadioDisabled" class="form-check-input" disabled>
                         <label class="custom-control-label" for="customRadioDisabled">Toggle this custom radio</label>
                     </div>
                 </form>

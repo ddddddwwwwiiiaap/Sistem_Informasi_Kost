@@ -27,8 +27,7 @@
                         <div class="col-12 col-sm-6">
                             <label for="name" class="form-label">Nama Kamar <span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="eg. Kamar 01"
-                                    required onfocus="focused(this)" onfocusout="defocused(this)">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="eg. Kamar 01" required onfocus="focused(this)" onfocusout="defocused(this)">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
@@ -36,7 +35,7 @@
                             <select id="choices-type" name="room_type_id" class="form-control" required>
                                 <option selected disabled>Pilih Tipe Kamar</option>
                                 @foreach($types as $type)
-                                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                <option value="{{ $type->id }}">{{ $type->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -65,30 +64,29 @@
 @endsection
 
 @push('script')
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="{{ asset('assets/js/plugins/dropzone.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/quill.min.js') }}"></script>
-    <script>
-        if (document.getElementById('editor-description')) {
-            var quill = new Quill('#editor-description', {
-                theme: 'snow' // Specify theme in configuration
-            });
-        };
-
-        if (document.getElementById('choices-type')) {
-            var tags = document.getElementById('choices-type');
-            const examples = new Choices(tags, {
-                searchEnabled: true,
-                searchPlaceholderValue: 'Search...',
-                shouldSort: false,
-            });
-        };
-
-        $("#form").on("submit", function () {
-            $("#description").val(quill.container.firstChild.innerHTML);
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="{{ asset('assets/js/plugins/dropzone.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/quill.min.js') }}"></script>
+<script>
+    if (document.getElementById('editor-description')) {
+        var quill = new Quill('#editor-description', {
+            theme: 'snow' // Specify theme in configuration
         });
+    };
 
-    </script>
+    if (document.getElementById('choices-type')) {
+        var tags = document.getElementById('choices-type');
+        const examples = new Choices(tags, {
+            searchEnabled: true,
+            searchPlaceholderValue: 'Search...',
+            shouldSort: false,
+        });
+    };
+
+    $("#form").on("submit", function() {
+        $("#description").val(quill.container.firstChild.innerHTML);
+    });
+</script>
 @endpush

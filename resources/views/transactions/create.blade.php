@@ -25,23 +25,23 @@
                     @csrf
                     <div class="row">
                         @if (Auth::user()->role == 'admin')
-                            <div class="col-12">
-                                <label for="name" class="form-label">Nama Customer</label>
-                                <select class="form-control" name="customer_id" id="choices-customer">
-                                    <option selected disabled>Pilih Customer</option>
-                                    @foreach ($customers as $customer)
-                                        <option value="{{ $customer->id }}">{{ $customer->user->name . ' - ' . $customer->room->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
+                        <div class="col-12">
+                            <label for="name" class="form-label">Nama Customer</label>
+                            <select class="form-control" name="customer_id" id="choices-customer">
+                                <option selected disabled>Pilih Customer</option>
+                                @foreach ($customers as $customer)
+                                <option value="{{ $customer->id }}">{{ $customer->user->name . ' - ' . $customer->room->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         @else
-                            <div class="col-12">
-                                <label for="name" class="form-label">Nama Customer</label>
-                                <select class="form-control" name="customer_id" id="choices-customer" disabled>
-                                    <option value="{{ $customer->id }}" selected>{{ $customer->user->name . ' - ' . $customer->room->name }}</option>
-                                </select>
-                                <input type="hidden" name="customer_id" value="{{ $customer->id }}">
-                            </div>
+                        <div class="col-12">
+                            <label for="name" class="form-label">Nama Customer</label>
+                            <select class="form-control" name="customer_id" id="choices-customer" disabled>
+                                <option value="{{ $customer->id }}" selected>{{ $customer->user->name . ' - ' . $customer->room->name }}</option>
+                            </select>
+                            <input type="hidden" name="customer_id" value="{{ $customer->id }}">
+                        </div>
                         @endif
                     </div>
                     <div class="row mt-4">
@@ -94,25 +94,25 @@
 @endsection
 
 @push('script')
-    <script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        if (document.getElementById('choices-customer')) {
-            var tags = document.getElementById('choices-customer');
-            const examples = new Choices(tags, {
-                searchEnabled: true,
-                searchPlaceholderValue: 'Search...', 
-                shouldSort: false,
-            });
-        };
+<script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    if (document.getElementById('choices-customer')) {
+        var tags = document.getElementById('choices-customer');
+        const examples = new Choices(tags, {
+            searchEnabled: true,
+            searchPlaceholderValue: 'Search...',
+            shouldSort: false,
+        });
+    };
 
-        if (document.getElementById('choices-month')) {
-            var element = document.getElementById('choices-month');
-            const example = new Choices(element, {
-                searchEnabled: true,
-                removeItemButton: true,
-                shouldSort: false,
-            });
-        };
-    </script>
+    if (document.getElementById('choices-month')) {
+        var element = document.getElementById('choices-month');
+        const example = new Choices(element, {
+            searchEnabled: true,
+            removeItemButton: true,
+            shouldSort: false,
+        });
+    };
+</script>
 @endpush

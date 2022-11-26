@@ -38,7 +38,7 @@
                                 <textarea id="description" name="description" class="form-control" cols="30" rows="5" onfocus="focused(this)" onfocusout="defocused(this)"></textarea>
                             </div>
                         </div>
-                    </div>               
+                    </div>
                     <div class="d-flex justify-content-end mt-4">
                         <a href="{{ route('facilities.index') }}" class="btn btn-light m-0">Cancel</a>
                         <button type="submit" name="button" class="btn bg-gradient-primary m-0 ms-2">Simpan</button>

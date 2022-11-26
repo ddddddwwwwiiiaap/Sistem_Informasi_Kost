@@ -25,30 +25,27 @@
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Nama</th>
-                                <th
-                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Deskripsi</th>
-                                <th
-                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-center" style="width: 220px">
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-center" style="width: 220px">
                                     Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($facilities as $facility)
+                            @foreach($facilities as $facility)
                             <tr>
                                 <td class="text-sm font-weight-normal">{{ $facility->name }}</td>
                                 <td class="text-sm font-weight-normal">{{ $facility->description }}</td>
                                 <td class="text-center">
-                                    <a href="{{ route('facilities.edit', $facility->id) }}" class="text-secondary font-weight-bold text-xs"
-                                        data-toggle="tooltip" data-original-title="Edit user">
+                                    <a href="{{ route('facilities.edit', $facility->id) }}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                         <i class="fa fa-edit"></i>&nbsp; Edit &nbsp;
                                     </a>
                                     <form action="{{ route('facilities.destroy', $facility->id) }}" method="post" class="d-inline">
-                                    @csrf
-                                    @method('DELETE')
-                                    <a href="#" class="text-secondary font-weight-bold text-xs" onclick="this.closest('form').submit();return false;"> 
-                                    <i class="fa fa-trash"></i> Delete &nbsp;
-                                    </a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <a href="#" class="text-secondary font-weight-bold text-xs" onclick="this.closest('form').submit();return false;">
+                                            <i class="fa fa-trash"></i> Delete &nbsp;
+                                        </a>
                                     </form>
                                 </td>
                             </tr>
@@ -63,13 +60,11 @@
 @endsection
 
 @push('script')
-    <script src="{{ asset('assets/js/plugins/datatables.js') }}"></script>
-    <script>
-        const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
-            searchable: true,
-            fixedHeight: true
-        });
-
-    </script>
+<script src="{{ asset('assets/js/plugins/datatables.js') }}"></script>
+<script>
+    const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
+        searchable: true,
+        fixedHeight: true
+    });
+</script>
 @endpush
-

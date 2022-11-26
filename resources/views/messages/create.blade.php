@@ -52,16 +52,16 @@
 @endsection
 
 @push('script')
-    <script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        if (document.getElementById('choices-customer')) {
-            var tags = document.getElementById('choices-customer');
-            const examples = new Choices(tags, {
-                searchEnabled: true,
-                searchPlaceholderValue: 'Search...', 
-                shouldSort: false,
-            });
-        };
-    </script>
+<script src="{{ asset('assets/js/plugins/choices.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    if (document.getElementById('choices-customer')) {
+        var tags = document.getElementById('choices-customer');
+        const examples = new Choices(tags, {
+            searchEnabled: true,
+            searchPlaceholderValue: 'Search...',
+            shouldSort: false,
+        });
+    };
+</script>
 @endpush

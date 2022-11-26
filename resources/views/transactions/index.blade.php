@@ -18,28 +18,6 @@
             Pembayaran Baru
         </a>
     </div>
-    <div class="d-flex">
-        <div class="dropdown d-inline">
-            <a href="javascript:;" class="btn btn-outline-dark dropdown-toggle " data-bs-toggle="dropdown"
-                id="navbarDropdownMenuLink2">
-                Filters
-            </a>
-            <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3" aria-labelledby="navbarDropdownMenuLink2"
-                data-popper-placement="left-start">
-                <li><a class="dropdown-item border-radius-md" href="javascript:;">Status: Paid</a></li>
-                <li><a class="dropdown-item border-radius-md" href="javascript:;">Status: Refunded</a></li>
-                <li><a class="dropdown-item border-radius-md" href="javascript:;">Status: Canceled</a></li>
-                <li>
-                    <hr class="horizontal dark my-2">
-                </li>
-                <li><a class="dropdown-item border-radius-md text-danger" href="javascript:;">Remove Filter</a></li>
-            </ul>
-        </div>
-        <button class="btn btn-icon btn-outline-dark ms-2 export" data-type="csv" type="button">
-            <span class="btn-inner--icon"><i class="ni ni-archive-2"></i></span>
-            <span class="btn-inner--text">Export CSV</span>
-        </button>
-    </div>
 </div>
 <div class="row">
     <div class="col-12">
@@ -58,59 +36,57 @@
                     </thead>
                     <tbody>
                         @foreach ($transactions as $transaction)
-                            <tr>
-                                <td class="font-weight-bold">
-                                    <span class="my-2 text-xs">{{ $transaction->created_at->format('d M, h:i A') }}</span>
-                                </td>
-                                <td class="text-xs font-weight-bold">
-                                    <div class="d-flex align-items-center">
-                                        @if ($transaction->status == 'accept')
-                                            <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-2 btn-sm d-flex align-items-center justify-content-center">
-                                                <i class="fas fa-check" aria-hidden="true"></i>
-                                            </button>
-                                            <span>Sukses</span>
-                                        @else
-                                            @if (Auth::user()->role == 'customer')
-                                                <a href="#" class="btn btn-icon-only btn-rounded btn-outline-warning mb-0 me-2 btn-sm d-flex align-items-center justify-content-center">
-                                                    <i class="fas fa-exclamation" aria-hidden="true"></i>
-                                                </a>
-                                                <span>Pending</span>
-                                            @else
-                                                <a href="{{ route('transactions.updateStatus', $transaction->id) }}" class="btn btn-icon-only btn-rounded btn-outline-warning mb-0 me-2 btn-sm d-flex align-items-center justify-content-center">
-                                                    <i class="fas fa-exclamation" aria-hidden="true"></i>
-                                                </a>
-                                                <span>Pending</span>
-                                            @endif
-                                        @endif
-                                    </div>
-                                </td>
-                                <td class="text-xs font-weight-bold">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar avatar-xs me-2 bg-gradient-dark">
-                                            <span>{{ substr($transaction->customer->user->name, 0, 1) }}</span>
-                                        </div>
-                                        <span>{{ $transaction->customer->user->name }}</span>
-                                    </div>
-                                </td>
-                                <td class="text-xs font-weight-bold">
-                                    <span class="my-2 text-xs">{{ $transaction->customer->room->name }}</span>
-                                </td>
-                                <td class="text-xs font-weight-bold">
-                                    <span class="my-2 text-xs">Rp {{ number_format($transaction->total,0,',','.') }}</span>
-                                </td>
-                                <td class="text-center">
-                                    <a href="{{ route('transactions.show', $transaction->id) }}" class="text-secondary font-weight-bold text-xs"
-                                        data-toggle="tooltip" data-original-title="Detail transaksi">
-                                        <i class="fa fa-clipboard"></i> Detail
-                                    </a> &nbsp;
-                                    @if (Auth::user()->role == 'admin' || (Auth::user()->role == 'customer' && $transaction->status == 'pending'))
-                                        <a href="{{ route('transactions.edit', $transaction->id) }}" class="text-secondary font-weight-bold text-xs"
-                                            data-toggle="tooltip" data-original-title="Edit transaksi">
-                                            <i class="fa fa-edit"></i> Edit
-                                        </a>
+                        <tr>
+                            <td class="font-weight-bold">
+                                <span class="my-2 text-xs">{{ $transaction->created_at->format('d M, h:i A') }}</span>
+                            </td>
+                            <td class="text-xs font-weight-bold">
+                                <div class="d-flex align-items-center">
+                                    @if ($transaction->status == 'accept')
+                                    <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-2 btn-sm d-flex align-items-center justify-content-center">
+                                        <i class="fas fa-check" aria-hidden="true"></i>
+                                    </button>
+                                    <span>Sukses</span>
+                                    @else
+                                    @if (Auth::user()->role == 'customer')
+                                    <a href="#" class="btn btn-icon-only btn-rounded btn-outline-warning mb-0 me-2 btn-sm d-flex align-items-center justify-content-center">
+                                        <i class="fas fa-exclamation" aria-hidden="true"></i>
+                                    </a>
+                                    <span>Pending</span>
+                                    @else
+                                    <a href="{{ route('transactions.updateStatus', $transaction->id) }}" class="btn btn-icon-only btn-rounded btn-outline-warning mb-0 me-2 btn-sm d-flex align-items-center justify-content-center">
+                                        <i class="fas fa-exclamation" aria-hidden="true"></i>
+                                    </a>
+                                    <span>Pending</span>
                                     @endif
-                                </td>
-                            </tr>
+                                    @endif
+                                </div>
+                            </td>
+                            <td class="text-xs font-weight-bold">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar avatar-xs me-2 bg-gradient-dark">
+                                        <span>{{ substr($transaction->customer->user->name, 0, 1) }}</span>
+                                    </div>
+                                    <span>{{ $transaction->customer->user->name }}</span>
+                                </div>
+                            </td>
+                            <td class="text-xs font-weight-bold">
+                                <span class="my-2 text-xs">{{ $transaction->customer->room->name }}</span>
+                            </td>
+                            <td class="text-xs font-weight-bold">
+                                <span class="my-2 text-xs">Rp {{ number_format($transaction->total,0,',','.') }}</span>
+                            </td>
+                            <td class="text-center">
+                                <a href="{{ route('transactions.show', $transaction->id) }}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Detail transaksi">
+                                    <i class="fa fa-clipboard"></i> Detail
+                                </a> &nbsp;
+                                @if (Auth::user()->role == 'admin' || (Auth::user()->role == 'customer' && $transaction->status == 'pending'))
+                                <a href="{{ route('transactions.edit', $transaction->id) }}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit transaksi">
+                                    <i class="fa fa-edit"></i> Edit
+                                </a>
+                                @endif
+                            </td>
+                        </tr>
                         @endforeach
                     </tbody>
                 </table>
@@ -122,13 +98,12 @@
 @endsection
 
 @push('script')
-    <script src="{{ asset('assets/js/plugins/datatables.js') }}"></script>
-    <script>
-        const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
-            searchable: true,
-            fixedHeight: true,
-            perPageSelect: false
-        });
-
-    </script>
+<script src="{{ asset('assets/js/plugins/datatables.js') }}"></script>
+<script>
+    const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
+        searchable: true,
+        fixedHeight: true,
+        perPageSelect: false
+    });
+</script>
 @endpush

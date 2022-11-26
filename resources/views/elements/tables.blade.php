@@ -24,14 +24,11 @@
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Author</th>
-                                <th
-                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Function</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Status</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Employed</th>
                                 <th class="text-secondary opacity-7"></th>
                             </tr>
@@ -41,8 +38,7 @@
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div>
-                                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3"
-                                                alt="user1">
+                                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-0 text-sm">John Michael</h6>
@@ -61,8 +57,7 @@
                                     <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                                 </td>
                                 <td class="align-middle">
-                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                        data-toggle="tooltip" data-original-title="Edit user">
+                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                         Edit
                                     </a>
                                 </td>
@@ -71,8 +66,7 @@
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div>
-                                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3"
-                                                alt="user2">
+                                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user2">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-0 text-sm">Alexa Liras</h6>
@@ -91,8 +85,7 @@
                                     <span class="text-secondary text-xs font-weight-bold">11/01/19</span>
                                 </td>
                                 <td class="align-middle">
-                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                        data-toggle="tooltip" data-original-title="Edit user">
+                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                         Edit
                                     </a>
                                 </td>
@@ -101,8 +94,7 @@
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div>
-                                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3"
-                                                alt="user3">
+                                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user3">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-0 text-sm">Laurent Perrier</h6>
@@ -121,8 +113,7 @@
                                     <span class="text-secondary text-xs font-weight-bold">19/09/17</span>
                                 </td>
                                 <td class="align-middle">
-                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                        data-toggle="tooltip" data-original-title="Edit user">
+                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                         Edit
                                     </a>
                                 </td>
@@ -131,8 +122,7 @@
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div>
-                                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3"
-                                                alt="user4">
+                                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user4">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-0 text-sm">Michael Levi</h6>
@@ -151,8 +141,7 @@
                                     <span class="text-secondary text-xs font-weight-bold">24/12/08</span>
                                 </td>
                                 <td class="align-middle">
-                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                        data-toggle="tooltip" data-original-title="Edit user">
+                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                         Edit
                                     </a>
                                 </td>
@@ -161,8 +150,7 @@
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div>
-                                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3"
-                                                alt="user5">
+                                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user5">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-0 text-sm">Richard Gran</h6>
@@ -181,8 +169,7 @@
                                     <span class="text-secondary text-xs font-weight-bold">04/10/21</span>
                                 </td>
                                 <td class="align-middle">
-                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                        data-toggle="tooltip" data-original-title="Edit user">
+                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                         Edit
                                     </a>
                                 </td>
@@ -191,8 +178,7 @@
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div>
-                                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3"
-                                                alt="user6">
+                                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user6">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-0 text-sm">Miriam Eric</h6>
@@ -211,8 +197,7 @@
                                     <span class="text-secondary text-xs font-weight-bold">14/09/20</span>
                                 </td>
                                 <td class="align-middle">
-                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                        data-toggle="tooltip" data-original-title="Edit user">
+                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                         Edit
                                     </a>
                                 </td>
@@ -237,14 +222,11 @@
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Project</th>
-                                <th
-                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Budget</th>
-                                <th
-                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Status</th>
-                                <th
-                                    class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
                                     Completion</th>
                                 <th></th>
                             </tr>
@@ -254,8 +236,7 @@
                                 <td>
                                     <div class="d-flex px-2">
                                         <div>
-                                            <img src="../assets/img/small-logos/logo-spotify.svg"
-                                                class="avatar avatar-sm rounded-circle me-2" alt="spotify">
+                                            <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
                                         </div>
                                         <div class="my-auto">
                                             <h6 class="mb-0 text-sm">Spotify</h6>
@@ -273,9 +254,7 @@
                                         <span class="me-2 text-xs font-weight-bold">60%</span>
                                         <div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-info" role="progressbar"
-                                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                    style="width: 60%;"></div>
+                                                <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -290,8 +269,7 @@
                                 <td>
                                     <div class="d-flex px-2">
                                         <div>
-                                            <img src="../assets/img/small-logos/logo-invision.svg"
-                                                class="avatar avatar-sm rounded-circle me-2" alt="invision">
+                                            <img src="../assets/img/small-logos/logo-invision.svg" class="avatar avatar-sm rounded-circle me-2" alt="invision">
                                         </div>
                                         <div class="my-auto">
                                             <h6 class="mb-0 text-sm">Invision</h6>
@@ -309,16 +287,13 @@
                                         <span class="me-2 text-xs font-weight-bold">100%</span>
                                         <div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-success" role="progressbar"
-                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                                                    style="width: 100%;"></div>
+                                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-v text-xs"></i>
                                     </button>
                                 </td>
@@ -327,8 +302,7 @@
                                 <td>
                                     <div class="d-flex px-2">
                                         <div>
-                                            <img src="../assets/img/small-logos/logo-jira.svg"
-                                                class="avatar avatar-sm rounded-circle me-2" alt="jira">
+                                            <img src="../assets/img/small-logos/logo-jira.svg" class="avatar avatar-sm rounded-circle me-2" alt="jira">
                                         </div>
                                         <div class="my-auto">
                                             <h6 class="mb-0 text-sm">Jira</h6>
@@ -346,16 +320,13 @@
                                         <span class="me-2 text-xs font-weight-bold">30%</span>
                                         <div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-danger" role="progressbar"
-                                                    aria-valuenow="30" aria-valuemin="0" aria-valuemax="30"
-                                                    style="width: 30%;"></div>
+                                                <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="30" style="width: 30%;"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-v text-xs"></i>
                                     </button>
                                 </td>
@@ -364,8 +335,7 @@
                                 <td>
                                     <div class="d-flex px-2">
                                         <div>
-                                            <img src="../assets/img/small-logos/logo-slack.svg"
-                                                class="avatar avatar-sm rounded-circle me-2" alt="slack">
+                                            <img src="../assets/img/small-logos/logo-slack.svg" class="avatar avatar-sm rounded-circle me-2" alt="slack">
                                         </div>
                                         <div class="my-auto">
                                             <h6 class="mb-0 text-sm">Slack</h6>
@@ -383,16 +353,13 @@
                                         <span class="me-2 text-xs font-weight-bold">0%</span>
                                         <div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-success" role="progressbar"
-                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"
-                                                    style="width: 0%;"></div>
+                                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%;"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-v text-xs"></i>
                                     </button>
                                 </td>
@@ -401,8 +368,7 @@
                                 <td>
                                     <div class="d-flex px-2">
                                         <div>
-                                            <img src="../assets/img/small-logos/logo-webdev.svg"
-                                                class="avatar avatar-sm rounded-circle me-2" alt="webdev">
+                                            <img src="../assets/img/small-logos/logo-webdev.svg" class="avatar avatar-sm rounded-circle me-2" alt="webdev">
                                         </div>
                                         <div class="my-auto">
                                             <h6 class="mb-0 text-sm">Webdev</h6>
@@ -420,16 +386,13 @@
                                         <span class="me-2 text-xs font-weight-bold">80%</span>
                                         <div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-info" role="progressbar"
-                                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="80"
-                                                    style="width: 80%;"></div>
+                                                <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80" style="width: 80%;"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-v text-xs"></i>
                                     </button>
                                 </td>
@@ -438,8 +401,7 @@
                                 <td>
                                     <div class="d-flex px-2">
                                         <div>
-                                            <img src="../assets/img/small-logos/logo-xd.svg"
-                                                class="avatar avatar-sm rounded-circle me-2" alt="xd">
+                                            <img src="../assets/img/small-logos/logo-xd.svg" class="avatar avatar-sm rounded-circle me-2" alt="xd">
                                         </div>
                                         <div class="my-auto">
                                             <h6 class="mb-0 text-sm">Adobe XD</h6>
@@ -457,16 +419,13 @@
                                         <span class="me-2 text-xs font-weight-bold">100%</span>
                                         <div>
                                             <div class="progress">
-                                                <div class="progress-bar bg-gradient-success" role="progressbar"
-                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                                                    style="width: 100%;"></div>
+                                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-v text-xs"></i>
                                     </button>
                                 </td>
