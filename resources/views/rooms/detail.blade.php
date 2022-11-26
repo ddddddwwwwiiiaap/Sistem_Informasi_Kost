@@ -21,7 +21,7 @@
                 <h5 class="mb-4">Detail Kamar</h5>
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 text-center">
-
+                        <img src="https://arsitagx-master-article.s3.ap-southeast-1.amazonaws.com/article-photo/581/desain-kamar-kos-simpel-dan-keren-1.jpg" class="w-80 min-height-100 border-radius-lg shadow" alt="Responsive image">
                         <!-- Root element of PhotoSwipe. Must have class pswp. -->
                         <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
                             <!-- Background of PhotoSwipe. It's a separate element, as animating opacity is faster than rgba(). -->
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 mx-auto">
+                    <div class="col-lg-7 mx-auto">
                         <h3 class="mt-lg-0 mt-4">{{ $room->name }}</h3>
                         <div class="rating">
                             {{ $room->roomType->name }}
