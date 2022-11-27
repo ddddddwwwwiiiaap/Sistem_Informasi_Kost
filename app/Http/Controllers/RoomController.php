@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Alert;
 use App\Models\Customer;
-use App\Models\File;
 use App\Models\Room;
 use App\Models\RoomType;
 use Illuminate\Http\Request;
@@ -53,7 +52,6 @@ class RoomController extends Controller
         }
 
         $room_id = Room::store($request);
-        File::editRoomId($room_id);
         Alert::toast('Kamar baru berhasil ditambahkan', 'success');
         return redirect()->route('rooms.index');
     }
@@ -66,8 +64,7 @@ class RoomController extends Controller
      */
     public function show(Room $room)
     {
-        $images = File::getImageByRoom($room->id);
-        return view('rooms.detail', compact('room', 'images'));
+        return view('rooms.detail', compact('room'));
     }
 
     /**
@@ -118,7 +115,6 @@ class RoomController extends Controller
             Alert::toast('Kamar masih ada yang menempati.', 'error');
             return redirect()->back();
         } else {
-            File::destroyByRoom($room->id);
             $room->delete();
             Alert::toast('Kamar berhasil dihapus.', 'success');
             return redirect()->route('rooms.index');

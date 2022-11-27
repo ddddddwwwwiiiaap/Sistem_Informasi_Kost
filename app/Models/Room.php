@@ -30,15 +30,7 @@ class Room extends Model
     {
         return $this->belongsTo(RoomType::class);
     }
-    /**
-     * Get all of the files for the Room
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function files()
-    {
-        return $this->hasOne(File::class);
-    }
+
 
     /**
      * Get all of the customers for the Room
@@ -52,7 +44,7 @@ class Room extends Model
 
     public static function getData()
     {
-        return Room::with('files')->get();
+        return Room::all();
     }
 
     public static function getDataAvailableRoom()

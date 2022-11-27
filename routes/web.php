@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BoardingHouseController;
-use App\Http\Controllers\RegencyController;
-use App\Http\Controllers\DistrictController;
-use App\Http\Controllers\VillageController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\RoomTypeController;
 use App\Http\Controllers\RoomController;
@@ -33,9 +29,6 @@ Auth::routes();
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [DashboardController::class, 'indexAdmin'])->name('admin.dashboard');
-    Route::get('regencies/{id}', [RegencyController::class, 'index']);
-    Route::get('districts/{id}', [DistrictController::class, 'index']);
-    Route::get('villages/{id}', [VillageController::class, 'index']);
     Route::resource('facilities', FacilityController::class);
     Route::resource('roomTypes', RoomTypeController::class);
     Route::resource('rooms', RoomController::class);
