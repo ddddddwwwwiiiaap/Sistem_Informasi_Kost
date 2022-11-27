@@ -123,15 +123,4 @@ class TransactionController extends Controller
         Alert::toast('Transaksi berhasil diperbarui.', 'success');
         return redirect()->route('transactions.index');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Transaction  $transaction
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Transaction $transaction)
-    {
-        //
-    }
 }

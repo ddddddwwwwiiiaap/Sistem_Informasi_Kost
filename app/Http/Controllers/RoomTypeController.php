@@ -39,10 +39,6 @@ class RoomTypeController extends Controller
         Alert::toast('Type Kamar baru berhasil dibuat.', 'success');
         return redirect()->route('roomTypes.index');
     }
-    public function show(RoomType $roomType)
-    {
-        //
-    }
 
     public function edit(RoomType $roomType)
     {   

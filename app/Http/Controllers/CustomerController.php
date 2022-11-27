@@ -65,19 +65,7 @@ class CustomerController extends Controller
             'Customer baru berhasil ditambahkan.', 
             'Email: <strong>' . $email . '</strong><br> Password: <strong>' . $password . '</strong>')
             ->toHtml()->persistent('Dismiss');
-
         return redirect()->route('customers.index');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Customer  $customer
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Customer $customer)
-    {
-        //
     }
 
     /**

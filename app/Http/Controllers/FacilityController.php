@@ -53,17 +53,6 @@ class FacilityController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Facility  $facility
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Facility $facility)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Facility  $facility

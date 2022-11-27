@@ -63,17 +63,6 @@ class MessageController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Message  $message
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Message $message)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Message  $message
@@ -114,16 +103,5 @@ class MessageController extends Controller
         Message::updateStatus($message);
         Alert::toast('Status pesan berhasil diperbarui.', 'success');
         return redirect()->route('messages.index');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Message  $message
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Message $message)
-    {
-        //
     }
 }
