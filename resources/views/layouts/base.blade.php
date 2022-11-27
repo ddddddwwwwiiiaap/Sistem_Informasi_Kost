@@ -20,7 +20,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/apple-icon.png') }}">
-  <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}">
+  <link rel="icon" type="image/png" href="{{ asset('http://files.web.neo.id/08/a3/08a3e4e2-1504-4355-ac9c-3b8e878c92f6.jpg') }}">
   <title>
     Sistem Management Kost
   </title>
